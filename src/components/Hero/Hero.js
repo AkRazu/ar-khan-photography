@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.css";
 import { Link } from "react-router-dom";
 import Services from "../Services/Services";
+import AboutMe from "../AboutMe/AboutMe";
 const Hero = () => {
   return (
     <div>
@@ -57,6 +58,9 @@ const Hero = () => {
         >
           See all
         </Link>
+      </div>
+      <div>
+        <AboutMe/>
       </div>
       </div>
     </div>
