@@ -3,6 +3,7 @@ import "./Hero.css";
 import { Link } from "react-router-dom";
 import Services from "../Services/Services";
 import AboutMe from "../AboutMe/AboutMe";
+import Works from "../Works/Works";
 const Hero = () => {
   return (
     <div>
@@ -61,6 +62,19 @@ const Hero = () => {
       </div>
       <div>
         <AboutMe/>
+      </div>
+      <div
+        className="my-10"
+      >
+        <h1 className="text-4xl font-extrabold dark:text-white">Latest Works</h1>
+        <p className="mb-3 py-5 font-light text-gray-500 dark:text-gray-400">
+        My latest photo projects
+        </p>
+      </div>
+      <div
+        className="my-10"
+      >
+       <Works/>
       </div>
       </div>
     </div>

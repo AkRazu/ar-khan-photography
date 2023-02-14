@@ -3,16 +3,22 @@ import "react-photo-view/dist/react-photo-view.css";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 const AllService = ({ service }) => {
   const { image, name, price, description } = service;
- 
+
   return (
-    <div data-aos="fade-up" data-aos-duration="2000"
-    
-    data-aos-anchor-placement="top-bottom">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      data-aos-anchor-placement="top-bottom"
+    >
       <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <PhotoProvider
-          speed={() => 800}
-          easing={(type) => (type === 2 ? 'cubic-bezier(0.36, 0, 0.66, -0.56)' : 'cubic-bezier(0.34, 1.56, 0.64, 1)')}
+            speed={() => 800}
+            easing={(type) =>
+              type === 2
+                ? "cubic-bezier(0.36, 0, 0.66, -0.56)"
+                : "cubic-bezier(0.34, 1.56, 0.64, 1)"
+            }
           >
             <div className="foo">
               <PhotoView src={image}>
@@ -31,7 +37,7 @@ const AllService = ({ service }) => {
             <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
               {name} Photography
             </h5>
-            <p>{description.slice(0,59)}</p>
+            <p>{description.slice(0, 59)}</p>
           </a>
           <div class="flex items-center mt-2.5 mb-5">
             <svg
