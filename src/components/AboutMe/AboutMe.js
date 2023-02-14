@@ -1,26 +1,33 @@
 import React from "react";
-import AboutPhotography from '../../images/AboutPhotography/AboutPhotography.jpg'
+import AboutPhotography from "../../images/AboutPhotography/AboutPhotography.jpg";
 const AboutMe = () => {
   return (
     <div>
       <section className="bg-white dark:bg-gray-900">
         <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
           <img
+            data-aos="fade-right"
             className="w-full dark:hidden"
             src={AboutPhotography}
             alt="About Photography"
+            data-aos-duration="1000"
           />
           <img
             className="w-full hidden dark:block"
             src={AboutPhotography}
             alt="About Photography"
           />
-          <div className="mt-4 md:mt-0">
+          <div data-aos="fade-left" data-aos-duration="1000" className="mt-4 md:mt-0">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            About
+              About
             </h2>
             <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-            Hi, my name is AR. I am an artist and photographer. Nemo enim ipsam voluptatem quia voluptas aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.
+              Hi, my name is AR. I am an artist and photographer. Nemo enim
+              ipsam voluptatem quia voluptas aspernatur aut odit aut fugit.
+              Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam
+              voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo
+              inventore veritatis et quasi architecto beatae vitae dicta sunt
+              explicabo. Nemo enim ipsam voluptatem.
             </p>
             <a
               href="#"
