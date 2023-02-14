@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Love Story",
+    "price": 500,
+    "description": "This package includes individual meetings, up to two hours photo shoot. Additionally we’ll make some pictures using our drone. All pictures will be retouched. More than 100 pictures shared in individual gallery online.",
+    "image": "https://i.ibb.co/0Y2jtxM/pexels-becerra-govea-photo-6141748.jpg"
+  },
+  {
+    "name": "Elopement",
+    "price": 900,
+    "description": "This package includes individual meetings, up to five hours photo shoot. Additionally we’ll make some pictures using our drone. All pictures will be retouched. More than 150 pictures shared in individual gallery online. We love intimate events and elopements and we would be honoured to be part of your special day.",
+    "image": "https://i.ibb.co/FWLXt4H/pexels-matheus-bertelli-13870728.jpg"
+  },
+  {
+    "name": "Portrait",
+    "price": 600,
+    "description": "The package includes up to two hours photo shoot in our studio. All pictures will be retouched. More than 100 pictures shared in individual gallery online.",
+    "image": "https://i.ibb.co/4jrJvNq/pexels-yan-krukau-4667799.jpg"
+  },
+  {
+    "name": "Wedding",
+    "price": 3000,
+    "description": "This package includes individual meetings, up to five hours photo shoot. Additionally we’ll make some pictures using our drone. All pictures will be retouched. More than 150 pictures shared in individual gallery online. We love intimate events and elopements and we would be honoured to be part of your special day.",
+    "image": "https://i.ibb.co/7VpMK1R/pexels-melike-benli-8236118.jpg"
+  },
+  {
+    "name": "Fashion",
+    "price": 1273,
+    "description": "The package includes up to twelve hours of shooting your special day. Team consists of two photographers to be sure that we capture all special moments. All pictures will be retouched. More than 1000 pictures shared in individual gallery online.",
+    "image": "https://i.ibb.co/QvYdxCx/pexels-aa-dil-2086987.jpg"
+  },
+  {
+    "name": "Editorial",
+    "price": 300,
+    "description": "This package includes individual meetings, up to five hours photo shoot. Additionally we’ll make some pictures using our drone. All pictures will be retouched. More than 50 pictures shared in individual gallery online. We love intimate events and elopements and we would be honoured to be part of your special day.",
+    "image": "https://i.ibb.co/b6QvYQk/pexels-alice-alinari-12266523.jpg"
+  }
+]
