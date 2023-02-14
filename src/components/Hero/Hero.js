@@ -1,10 +1,11 @@
 import React from "react";
 import "./Hero.css";
 import { Link } from "react-router-dom";
+import Services from "../Services/Services";
 const Hero = () => {
   return (
     <div>
-      <div data-aos="zoom-in" data-aos-duration="3000" className="hero-section">
+      <div data-aos="zoom-in" data-aos-duration="1000" className="hero-section">
         <section class=" dark:bg-gray-900 h-fit">
           <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">
@@ -38,10 +39,6 @@ const Hero = () => {
         {/* My Services section */}
       </div>
       <div
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
         className="my-10"
       >
         <h1 className="text-4xl font-extrabold dark:text-white">My Services</h1>
@@ -49,6 +46,18 @@ const Hero = () => {
           Photography is a way of feeling, of touching, of loving. What you have
           caughton film is captured forever... if remember little things
         </p>
+      </div>
+      <div>
+        <div>
+          <Services/>
+        </div>
+      <div className="flex justify-center my-10">
+        <Link to='/service'
+          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          See all
+        </Link>
+      </div>
       </div>
     </div>
   );

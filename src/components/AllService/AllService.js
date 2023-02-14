@@ -1,23 +1,37 @@
 import React from "react";
-
+import "react-photo-view/dist/react-photo-view.css";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 const AllService = ({ service }) => {
-    const {image,name,price,description} = service;
-  console.log(service);
+  const { image, name, price, description } = service;
+ 
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-duration="2000"
+    
+    data-aos-anchor-placement="top-bottom">
       <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-          <img
+          <PhotoProvider
+          speed={() => 800}
+          easing={(type) => (type === 2 ? 'cubic-bezier(0.36, 0, 0.66, -0.56)' : 'cubic-bezier(0.34, 1.56, 0.64, 1)')}
+          >
+            <div className="foo">
+              <PhotoView src={image}>
+                <img class="p-8 rounded-t-lg" src={image} alt="" />
+              </PhotoView>
+            </div>
+          </PhotoProvider>
+          {/* <img
             class="p-8 rounded-t-lg"
             src={image}
             alt="product image"
-          />
+          /> */}
         </a>
         <div class="px-5 pb-5">
           <a href="#">
             <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
               {name} Photography
             </h5>
+            <p>{description.slice(0,59)}</p>
           </a>
           <div class="flex items-center mt-2.5 mb-5">
             <svg
@@ -82,7 +96,7 @@ const AllService = ({ service }) => {
               href="#"
               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Add to cart
+              Booking
             </a>
           </div>
         </div>
