@@ -25,7 +25,7 @@ const Footer = () => {
               <a href="#" className="mr-4 hover:underline md:mr-6">Contact</a>
           </li>
       </ul>
-      <span classNameName="text-sm text-gray-500 sm:text-center dark:text-gray-400">&copy; 2021-2023 <a href="#" className="hover:underline">AR khan photography</a>. All Rights Reserved.</span>
+      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">&copy; 2021-2023 <a href="#" className="hover:underline">AR khan photography</a>. All Rights Reserved.</span>
   </div>
 </footer>
         </div>

@@ -7,7 +7,9 @@ import Services from "./components/Services/Services";
 import NotFound from "./components/NotFound/NotFound";
 import Works from "./components/Works/Works";
 import Service from "./components/Service/Service";
-
+import Login from "./components/Login/Login";
+import SignUp from "./components/SignUp/SignUp";
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const router = createBrowserRouter([
     {
@@ -17,6 +19,14 @@ function App() {
         {
           path: "/",
           element: <Hero />,
+        },
+        {
+          path: "/login",
+          element: <Login/>,
+        },
+        {
+          path: "/signup",
+          element: <SignUp/>,
         },
         {
           path: "/services",
