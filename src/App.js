@@ -6,6 +6,7 @@ import Hero from "./components/Hero/Hero";
 import Services from "./components/Services/Services";
 import NotFound from "./components/NotFound/NotFound";
 import Works from "./components/Works/Works";
+import Service from "./components/Service/Service";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,12 +19,17 @@ function App() {
           element: <Hero />,
         },
         {
-          path: "/service",
+          path: "/services",
           element: <Services />,
         },
         {
+          path: "/service/:id",
+          element: <Service />,
+          loader: ({ params }) => fetch(`http://localhost:5000/service/${params.id}`),
+        },
+        {
           path: "*",
-          element: <NotFound/>,
+          element: <NotFound />,
         },
       ],
     },

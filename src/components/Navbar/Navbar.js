@@ -7,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Home', to: '/', current: true },
-  { name: 'Services', to: '/service', current: false },
+  { name: 'Services', to: '/services', current: false },
   { name: 'Contact', to: '/contact', current: false },
   { name: 'Blog', to: '/blog', current: false },
 ]
@@ -54,7 +54,7 @@ const Navbar = () => {
                         key={item.name}
                         to={item.to}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-700 hover:text-white',
+                          item.current ? 'text-black hover:bg-gray-700 hover:text-white' : 'text-black hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
