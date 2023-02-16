@@ -2,8 +2,9 @@ import React from "react";
 import "react-photo-view/dist/react-photo-view.css";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import { Link } from "react-router-dom";
+
 const AllService = ({ service }) => {
-  const { image, name, price, description,_id } = service;
+  const { image, name, price, description, _id } = service;
 
   return (
     <div
@@ -11,6 +12,7 @@ const AllService = ({ service }) => {
       data-aos-duration="2000"
       data-aos-anchor-placement="top-bottom"
     >
+      
       <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <PhotoProvider

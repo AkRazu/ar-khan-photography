@@ -10,6 +10,7 @@ import Service from "./components/Service/Service";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
 import 'react-toastify/dist/ReactToastify.css';
+import Reviews from "./components/Reviews/Reviews";
 function App() {
   const router = createBrowserRouter([
     {
@@ -19,6 +20,11 @@ function App() {
         {
           path: "/",
           element: <Hero />,
+        },
+        {
+          path: "/reviews",
+          element: <Reviews/>
+          
         },
         {
           path: "/login",
@@ -35,6 +41,11 @@ function App() {
         {
           path: "/services",
           element: <Services />,
+        },
+        {
+          path: "/services",
+          element: <Service />
+          
         },
         {
           path: "/service/:id",
