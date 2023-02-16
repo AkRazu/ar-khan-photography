@@ -4,7 +4,6 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const Work = ({ work }) => {
   const { image } = work;
-  console.log(work);
   return (
     <div>
       <PhotoProvider

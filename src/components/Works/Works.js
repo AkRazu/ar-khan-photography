@@ -4,7 +4,6 @@ import Work from '../Work/Work';
 
 const Works = () => {
     const[works, setWorks]=useWork();
-    console.log(works);
     return (
         <div data-aos="fade-up"
         data-aos-duration="3000">

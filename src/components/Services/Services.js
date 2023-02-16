@@ -6,7 +6,6 @@ const Services = () => {
   const [services, setServices] = useService();
   const [seeAll, setSeeAll] = useState(true);
   const location = useLocation()
-    console.log(location.pathname);
   const handelSeeAll = () => {
     setSeeAll(true);
     if (seeAll === true) {
