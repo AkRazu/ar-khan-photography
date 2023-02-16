@@ -1,8 +1,13 @@
+import { getAuth } from "firebase/auth";
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useLoaderData } from "react-router-dom";
+import app from "../../Firebase/firebase";
 
 const Service = () => {
   const { name, image, price, description } = useLoaderData();
+  const auth = getAuth(app);
+  const [user] = useAuthState(auth);
   return (
     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-6">
@@ -30,7 +35,8 @@ const Service = () => {
         </div>
       </div>
       <div>
-        <div class="my-10">
+        {
+          user ? <div class="my-10">
           <form>
             <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
               <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
@@ -66,7 +72,12 @@ const Service = () => {
             </a>
             .
           </p>
+        </div> :<div className="my-10">
+          <p className="my-5">Want to give review and see the other person review Login first ...</p>
+          <Link  className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" to='/login'>Login</Link>
         </div>
+        }
+        
       </div>
     </div>
   );
