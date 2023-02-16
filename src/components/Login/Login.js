@@ -1,17 +1,22 @@
 import { getAuth } from "firebase/auth";
 import React from "react";
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import app from "../../Firebase/firebase";
 import { ToastContainer, toast } from "react-toastify";
-import { FaGoogle } from 'react-icons/fa';
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const navigate = useNavigate();
+  let location = useLocation();
   const auth = getAuth(app);
+
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-    const [signInWithGoogle,user2, loading2, error2] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth);
   if (user) {
     navigate("/");
   }
@@ -83,13 +88,16 @@ const Login = () => {
       </div>
     );
   }
+  let from = location.state?.from?.pathname || "/";
 
   const handelLogin = (event) => {
     event.preventDefault();
-    const from = event.target;
-    const email = from.email.value;
-    const password = from.password.value;
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
     signInWithEmailAndPassword(email, password);
+    navigate(from, { replace: true });
   };
   return (
     <div className="mx-auto max-w-7xl">
@@ -171,23 +179,25 @@ const Login = () => {
                 >
                   Sign In
                 </button>
-                
               </form>
               <div>
                 <div className="flex items-center">
                   <hr className="w-2/4" />
                   <p className="mx-2 text-gray-400">or</p>
-                  <hr className="w-2/4"/>
+                  <hr className="w-2/4" />
                 </div>
                 <div className="my-2">
-                  <button onClick={()=>signInWithGoogle()} className="w-full text-white bg-indigo-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center ">
-                  <FaGoogle/>
-                  <p className="p-0 ml-24">Sign In with Google</p>
+                  <button
+                    onClick={() => signInWithGoogle()}
+                    className="w-full text-white bg-indigo-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center "
+                  >
+                    <FaGoogle />
+                    <p className="p-0 ml-24">Sign In with Google</p>
                   </button>
                 </div>
               </div>
               <div>
-              <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Don’t have an account yet?{" "}
                   <Link
                     to="/signup"

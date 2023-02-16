@@ -8,6 +8,13 @@ const Service = () => {
   const { name, image, price, description } = useLoaderData();
   const auth = getAuth(app);
   const [user] = useAuthState(auth);
+  const handelReview = event=>{
+    event.preventDefault();
+    const from = event.target;
+    const reviews = from.reviews.value;
+    console.log(reviews);
+    from.reset();
+  }
   return (
     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-6">
@@ -37,13 +44,14 @@ const Service = () => {
       <div>
         {
           user ? <div class="my-10">
-          <form>
+          <form onSubmit={handelReview}>
             <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
               <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
                 <label for="comment" class="sr-only">
                   Your review
                 </label>
                 <textarea
+                name="reviews"
                   id="comment"
                   rows="4"
                   class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
